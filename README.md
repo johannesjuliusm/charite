@@ -29,7 +29,7 @@ Visualize time series data with the `theme_charite()`.
 
 <div class="figure" style="text-align: center">
 
-<img src="man/figures/README-example-1.png" alt="Example plot generated with `example_plot( )`" width="80%" />
+<img src="man/figures/README-example-1.png" alt="Example plot generated with `example_plot( )`" width="100%" />
 <p class="caption">
 Example plot generated with `example_plot( )`
 </p>
@@ -40,7 +40,7 @@ Preview the available colour palettes.
 
 <div class="figure" style="text-align: center">
 
-<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="80%" />
+<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="100%" />
 <p class="caption">
 Colour palettes available with the `charite` package
 </p>
@@ -57,7 +57,7 @@ p <- ggplot(data, aes(x = x, y = y)) +
 # format the plot style
 p <- p + theme_charite()
 
-# easily save your plot in a format ideal for powerpoints and publications
+# easily save your plot in a format ideal for slides and publications
 # .. note:: saving as .svg is strongly recommended but requires `svglite` to be installed
 nice_save("myfigure.svg", p)
 ```

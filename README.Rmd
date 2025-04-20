@@ -35,7 +35,7 @@ devtools::install_github("johannesjuliusm/charite")
 
 Visualize time series data with the `theme_charite()`.
 
-```{r example, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Example plot generated with `example_plot( )`", out.width="80%"}
+```{r example, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Example plot generated with `example_plot( )`", out.width="100%"}
 
 library(charite)
 devtools::load_all(".")
@@ -44,7 +44,7 @@ example_plot()
 
 Preview the available colour palettes.
 
-```{r preview, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Colour palettes available with the `charite` package", out.width="80%"}
+```{r preview, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Colour palettes available with the `charite` package", out.width="100%"}
 
 preview_charite_palettes()
 ```
@@ -59,7 +59,7 @@ p <- ggplot(data, aes(x = x, y = y)) +
 # format the plot style
 p <- p + theme_charite()
 
-# easily save your plot in a format ideal for powerpoints and publications
+# easily save your plot in a format ideal for slides and publications
 # .. note:: saving as .svg is strongly recommended but requires `svglite` to be installed
 nice_save("myfigure.svg", p)
 ```
