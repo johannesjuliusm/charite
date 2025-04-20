@@ -1,0 +1,90 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "50%"
+)
+```
+
+# charite
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+<img src="man/figures/hex_charite.png" width="120" align="right" />
+
+A minimal R package with a custom ggplot2 theme, standardized colour palettes, and example plot styled to match the [visual identity](https://marke.charite.de/d/Y3FxSwD6Tz3a) of Charité – Universitätsmedizin Berlin.
+
+## Installation
+
+You can install the development version of charite from [GitHub](https://github.com/johannesjuliusm/charite) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("johannesjuliusm/charite")
+```
+
+## Examples
+
+Visualize time series data with the `theme_charite()`.
+
+```{r example, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Example plot generated with `example_plot( )`", out.width="50%"}
+
+library(charite)
+devtools::load_all(".")
+example_plot()
+```
+
+Preview the available colour palettes.
+
+```{r preview, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Colour palettes available with the `charite` package", out.width="50%"}
+
+preview_charite_palettes()
+```
+
+## Workflow
+
+```r
+# create your ggplot
+p <- ggplot(data, aes(x = x, y = y)) +
+        geom_point(size = 3, color = charite_colors$HIMBEER) # use any of the Charité colors
+        
+# format the plot style
+p <- p + theme_charite()
+
+# easily save your plot in a format ideal for powerpoints and publications
+# .. note:: saving as .svg is strongly recommended but requires `svglite` to be installed
+nice_save("myfigure.svg", p)
+```
+
+## Available Functions
+
+- `theme_charite()` – A custom ggplot2 theme
+- `charite_colors` – Named list of hex codes of the Charité visual identity colours
+- `charite_palettes` – Named list of colour palettes derived from the Charité visual identity colour scheme
+- `example_plot()` – Generates a demo plot
+- `make_charite_palette()` – Internal function to interpolate or reverse colour palettes in `charite_palettes`
+- `nice_save()` – ggsave wrapper with defaults ideal for high-res figures for publication
+- `preview_charite_palettes()` – Shows the available colour palettes as colour swatches
+- `scale_color_charite()` – ggplot2 colour scale using palettes from `charite_palettes`
+- `scale_fill_charite()` – ggplot2 fill scale using palettes from `charite_palettes`
+- `virchow()` – Surprise console ASCII art. Use for fun
+- `curves` – Included dataset with time series curves for demo plot
+
+## Author
+
+Developed by **Johannes Julius Mohn**  
+[Max Planck School of Cognition](https://cognition.maxplanckschools.org/en/doctoral-candidates/johannes-j-mohn) & [Charité – Universitätsmedizin Berlin](https://medpsych.charite.de/en/metas/person/person/address_detail/msc_johannes_mohn)
+
+Feel free to get in touch via [johannes.mohn@charite.de](mailto:johannes.mohn@charite.de)
+
+## How to Acknowledge
+
+If you use this package in your work or publication, please acknowledge the author.

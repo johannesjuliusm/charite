@@ -1,6 +1,6 @@
-#' Print ASCII art of Virchow to the console
+#' ASCII art of Rudolf Virchow
 #'
-#' Prints Rudolf Virchow as ASCII art.
+#' Prints Rudolf Virchow as ASCII art to the R console.
 #'
 #' @return A fun little Easter egg printing a classic ASCII rendering of Rudolf Virchow.
 #' @export

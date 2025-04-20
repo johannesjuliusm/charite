@@ -2,7 +2,7 @@
 % Please edit documentation in R/virchow.R
 \name{virchow}
 \alias{virchow}
-\title{Print ASCII art of Virchow to the console}
+\title{ASCII art of Rudolf Virchow}
 \usage{
 virchow()
 }
@@ -10,5 +10,5 @@ virchow()
 A fun little Easter egg printing a classic ASCII rendering of Rudolf Virchow.
 }
 \description{
-Prints Rudolf Virchow as ASCII art.
+Prints Rudolf Virchow as ASCII art to the R console.
 }

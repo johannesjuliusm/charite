@@ -1,0 +1,41 @@
+library(charite)
+library(ggplot2)
+
+set.seed(777)
+
+dummy <- data.frame(
+  id = paste0("sub-", sprintf("%03d", 1:10)),
+  group = sample(c("Patient", "Control"), 10, replace = TRUE),
+  predictor = runif(10, min = 0, max = 6),
+  outcome = runif(10, min = 0, max = 12)
+)
+
+p <- ggplot(dummy, aes(x = predictor, y = outcome, fill = group)) +
+  geom_point(
+    pch = 21,
+    size = 3,
+    stroke = NA,
+    alpha = .6
+  ) +
+  scale_fill_manual(values = c(
+    "Patient" = colors_charite$PFLAUME,
+    "Control" = colors_charite$MINT
+  )) +
+  scale_x_continuous(expand = c(0,0), limits = c(0, ceiling(max(dummy$predictor)))) +
+  scale_y_continuous(expand = c(0,0), limits = c(0, ceiling(max(dummy$outcome)))) +
+  labs(x = "The x axis Text",
+       y = "Y outcome [%]",
+       title = "Theme Development",
+       subtitle = "Charité"
+  ) +
+  theme_charite(
+    use_calibri = FALSE,
+    base_size = 10,
+    thickness = 0.5,
+    grid = TRUE,
+    debug_area = FALSE
+  ) +
+  theme(plot.margin = margin(r = 5, l = 5, t = 5, b = 5))
+p
+
+nice_save("man/figures/figure_test.svg")

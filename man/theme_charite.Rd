@@ -2,30 +2,42 @@
 % Please edit documentation in R/theme_charite.R
 \name{theme_charite}
 \alias{theme_charite}
-\title{Custom ggplot2 theme for Charite - Universitaetsmedizin Berlin by Johannes Julius Mohn}
+\title{A custom ggplot2 theme for Charite – Universitaetsmedizin Berlin by Johannes Julius Mohn}
 \usage{
 theme_charite(
   base_size = 10,
   thickness = 0.5,
   grid = FALSE,
-  use_calibri = FALSE
+  use_calibri = FALSE,
+  debug_area = FALSE
 )
 }
 \arguments{
-\item{base_size}{Base font size in points, i.e., same as in your text editor.}
+\item{base_size}{Base font size in points like in your favourite text editor.}
 
 \item{thickness}{Line thickness for axes. Default ggplot2 setting is 0.5.}
 
 \item{grid}{Logical; if TRUE, grid lines are added.}
 
 \item{use_calibri}{Use Calibri font? Defaults to FALSE.}
+
+\item{debug_area}{Visualize the plot margins for plot size debugging. Defaults to FALSE.}
 }
 \value{
-A ggplot2 theme by Johannes Julius Mohn for Charite - Universitaetsmedizin Berlin.
+A ggplot2 theme
 }
 \description{
 This function creates a custom ggplot2 theme with customizable options for font, line thickness, and grid.
 You can optionally choose to plot text in Calibri font if available on your OS.
+}
+\details{
 Calibri is the standard font on Windows and recommended by Charite. On macOS and Linux you may need to
 manually install the font first.
+}
+\examples{
+library(ggplot2)
+p <- ggplot(ChickWeight, aes(x = Time, y = weight, color = weight)) +
+       geom_point(size = 3) +
+       scale_color_charite("buch", discrete = FALSE) +
+       theme_charite()
 }

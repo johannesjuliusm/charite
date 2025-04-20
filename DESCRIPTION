@@ -1,7 +1,7 @@
 Package: charite
 Type: Package
 Title: A Theme and Tools for Charite-Style Plots
-Version: 0.1.0
+Version: 0.2.0
 Encoding: UTF-8
 Author: Johannes Julius Mohn
 Maintainer: Johannes Julius Mohn <johannes.mohn@charite.de>
@@ -9,5 +9,13 @@ Description: Provides a ggplot2 theme and color definitions following the Charit
 License: MIT + file LICENSE
 Imports:
     ggplot2,
-    grid
+    grDevices,
+    grid,
+    systemfonts
+Suggests:
+    svglite
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends: 
+    R (>= 2.10)
+LazyData: true
