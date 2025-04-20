@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # charite
@@ -28,7 +29,7 @@ Visualize time series data with the `theme_charite()`.
 
 <div class="figure" style="text-align: center">
 
-<img src="man/figures/README-example-1.png" alt="Example plot generated with `example_plot( )`" width="50%" />
+<img src="man/figures/README-example-1.png" alt="Example plot generated with `example_plot( )`" width="80%" />
 <p class="caption">
 Example plot generated with `example_plot( )`
 </p>
@@ -39,7 +40,7 @@ Preview the available colour palettes.
 
 <div class="figure" style="text-align: center">
 
-<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="50%" />
+<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="80%" />
 <p class="caption">
 Colour palettes available with the `charite` package
 </p>

@@ -35,7 +35,7 @@ devtools::install_github("johannesjuliusm/charite")
 
 Visualize time series data with the `theme_charite()`.
 
-```{r example, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Example plot generated with `example_plot( )`", out.width="50%"}
+```{r example, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Example plot generated with `example_plot( )`", out.width="80%"}
 
 library(charite)
 devtools::load_all(".")
@@ -44,7 +44,7 @@ example_plot()
 
 Preview the available colour palettes.
 
-```{r preview, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Colour palettes available with the `charite` package", out.width="50%"}
+```{r preview, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Colour palettes available with the `charite` package", out.width="80%"}
 
 preview_charite_palettes()
 ```
