@@ -37,14 +37,9 @@ Visualize time series data with `theme_charite()`.
 
 Preview the available colour palettes.
 
-<div class="figure" style="text-align: center">
-
-<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="80%" />
-<p class="caption">
-Colour palettes available with the `charite` package
+<p align="center">
+<img src="man/figures/README-preview-1.png" width="80%"/>
 </p>
-
-</div>
 
 ## Workflow
 

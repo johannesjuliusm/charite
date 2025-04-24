@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   dpi = 300,
   dev = "ragg_png",
-  out.width = "10%"
+  out.width = "80%"
 )
 ```
 
@@ -45,11 +45,9 @@ Visualize time series data with `theme_charite()`.
 
 Preview the available colour palettes.
 
-```{r preview, warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', fig.cap="Colour palettes available with the `charite` package", out.width="80%"}
-library(charite)
-devtools::load_all(".")
-preview_charite_palettes()
-```
+<p align="center">
+  <img src="man/figures/README-preview-1.png" width="80%"/>
+</p>
 
 ## Workflow
 
