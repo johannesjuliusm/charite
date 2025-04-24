@@ -48,11 +48,6 @@ example_plot <- function() {
       color = "Condition",
       fill = "Condition"
     ) +
-    theme_charite(base_size = 12) +
-    theme(
-      aspect.ratio = 1,
-      legend.position = "right",
-      plot.margin = margin(t = 5, r = 5, b = 5, l = 5)
-    )
+    theme_charite(base_size = 12)
   return(p)
 }

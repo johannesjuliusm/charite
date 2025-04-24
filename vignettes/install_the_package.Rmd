@@ -1,0 +1,75 @@
+---
+title: "Installing Packages"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{install_the_package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE,
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Installation from GitHub  
+
+`charite` is a minimal R package that extends `gglot2` functionalities with a custom theme and standardized colour palettes styled to match the  visual identity of [Charité – Universitätsmedizin Berlin](https://marke.charite.de/d/Y3FxSwD6Tz3a). The package was developed by [Johannes Julius Mohn](https://cognition.maxplanckschools.org/en/doctoral-candidates/johannes-j-mohn).
+
+You can install the package directly from GitHub. 
+
+```{r install from GitHub}
+# install.packages("devtools") # install `devtools` if not yet available
+devtools::install_github("johannesjuliusm/charite")
+```
+
+## Installation from source  
+
+If you are working on a computer with proxies, installation requires a little workaround. A proxy is an intermediary server that handles your internet traffic. This setup is common in corporate, university, or government networks where internet access is controlled or filtered.  
+
+Go to the [GitHub page](https://github.com/johannesjuliusm/charite) and download the package tarball (.tar.gz) from the "Releases" tab on the right hand side navigation pane. Unzip the file in a chosen location on your computer, e.g., the Downloads folder, and install the package from source.  
+
+```{r install from source}
+# install `charite` from tarball
+# set your path
+install.packages("~/Downloads/charite_0.3.0.tar.gz", repos = NULL, type = "source")
+```
+
+## Working on a computer with proxies  
+
+`charite` requires packages `ggplot2`, `svglite`, `grid`, and `grDevices` to be installed first. To install them from CRAN, simply use `install.packages("packageName")`. To install R packages on a machine behind a proxy, you need to configure the proxy settings so R can connect to CRAN or GitHub through it.  
+
+```{r install dependecies}
+# create or write to existing .Rprofile
+path2rprofile <- file.path(Sys.getenv("HOME"), ".Rprofile")
+file.edit(path2rprofile)
+
+# set proxies
+# if your proxy requires authentication, use username:password@proxy.charite.de:8080
+cat('Sys.setenv(http_proxy = "http://proxy.charite.de:8080")\n',
+    'Sys.setenv(https_proxy = "http://proxy.charite.de:8080")\n',
+    file = rprofile_path,
+    append = TRUE)
+
+# reload the .Rprofile settings
+source(rprofile_path)
+```
+
+Once set, in RStudio go to Tools > Global Options > Packages and untick "Use Internet Explorer library/proxy for HTTP" and restart your R session. Note, this option may no longer be available in the latest versions of R/RStudio. Instead, try to download and install packages using `wininet` (Windows only) or `libcurl`.  
+
+```{r install dependecies cont.}
+# use "wininet" (a Windows-specific internet method) when installing a package
+install.packages("packageName", method = "wininet")
+
+# make this a permanent option by saving to your .Rprofile
+cat('options(download.file.method = "wininet")\n', 
+    file = file.path(Sys.getenv("HOME"), ".Rprofile"),
+    append = TRUE)
+```

@@ -1,7 +1,7 @@
 Package: charite
 Type: Package
 Title: A Theme and Tools for Charite-Style Plots
-Version: 0.2.0
+Version: 0.3.0
 Encoding: UTF-8
 Author: Johannes Julius Mohn
 Maintainer: Johannes Julius Mohn <johannes.mohn@charite.de>
@@ -13,9 +13,12 @@ Imports:
     grid,
     systemfonts
 Suggests:
+    knitr,
+    rmarkdown,
     svglite
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
 LazyData: true
+VignetteBuilder: knitr

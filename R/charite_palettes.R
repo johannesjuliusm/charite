@@ -7,63 +7,70 @@
 #' @export
 charite_palettes <- list(
   primary = c(
-    PRIME_BLUE    = "#004d9b",
-    PRIME_DGREY   = "#7e898f",
-    PRIME_LGREY   = "#cbcfd2"
+    PRIME_BLUE    = charite_colors$PRIME_BLUE,
+    PRIME_DGREY   = charite_colors$PRIME_DGREY,
+    PRIME_LGREY   = charite_colors$PRIME_LGREY
   ),
   
   secondary = c(
-    SECOND_DBLUE  = "#002552",
-    SECOND_LBLUE  = "#007bc3",
-    KORALL        = "#ea5451"
+    SECOND_DBLUE  = charite_colors$SECOND_DBLUE,
+    SECOND_LBLUE  = charite_colors$SECOND_LBLUE,
+    KORALL        = charite_colors$KORALL
   ),
   
   mono = c(
-    BLACK         = "#000000",
-    PRIME_DGREY   = "#7e898f",
-    PRIME_LGREY   = "#cbcfd2",
-    WHITE         = "#ffffff"
+    BLACK         = charite_colors$BLACK,
+    PRIME_DGREY   = charite_colors$PRIME_DGREY,
+    PRIME_LGREY   = charite_colors$PRIME_LGREY
   ),
   
   light = c(
-    SECOND_LBLUE  = "#007bc3",
-    PRIME_LGREY   = "#cbcfd2"
+    SECOND_LBLUE  = charite_colors$SECOND_LBLUE,
+    PRIME_LGREY   = charite_colors$PRIME_LGREY
   ),
   
   buch = c(
-    PRIME_BLUE    = "#004d9b",
-    ROT           = "#e31f2c"
+    PRIME_BLUE    = charite_colors$PRIME_BLUE,
+    ROT           = charite_colors$ROT
   ),
   
   franklin = c(
-    LILA          = "#564091",
-    MINT          = "#88c69a",
-    MINERAL       = "#009aa9"
+    LILA          = charite_colors$LILA,
+    MINT          = charite_colors$MINT,
+    MINERAL       = charite_colors$MINERAL
   ),
   
   mitte = c(
-    WEINROT       = "#89014c",
-    HIMBEER       = "#d74b7f",
-    PRIME_LGREY   = "#cbcfd2",
-    MINT          = "#88c69a",
-    GRUEN         = "#008939"
+    WEINROT       = charite_colors$WEINROT,
+    HIMBEER       = charite_colors$HIMBEER,
+    MINT          = charite_colors$MINT,
+    GRUEN         = charite_colors$GRUEN
   ),
   
   cvk = c(
-    SECOND_DBLUE  = "#002552",
-    SECOND_LBLUE  = "#007bc3",
-    PRIME_LGREY   = "#cbcfd2",
-    ZITRONE       = "#ffdf43",
-    RAPSGELB      = "#fab600"
+    SECOND_DBLUE  = charite_colors$SECOND_DBLUE,
+    SECOND_LBLUE  = charite_colors$SECOND_LBLUE,
+    ZITRONE       = charite_colors$ZITRONE,
+    RAPSGELB      = charite_colors$RAPSGELB
+  ),
+  
+  berryseason = c(
+    HIMBEERE      = charite_colors$HIMBEER,
+    PFLAUME       = charite_colors$PFLAUME,
+    BROMBEERE     = charite_colors$BROMBEERE,
+    HIMBEERE      = charite_colors$SECOND_DBLUE,
+    MOCCA         = charite_colors$MOCCA,
+    BRAUN         = charite_colors$BRAUN
   ),
   
   goldelse = c(
-    RAPSGELB      = "#fab600",
-    ZITRONE       = "#ffdf43",
-    LIMETTE       = "#d1d811",
-    GRASGRUEN     = "#a1ba0c",
-    MINERAL       = "#009aa9",
-    LAVENDEL      = "#7876b6",
-    LILA          = "#564091"
+    RAPSGELB      = charite_colors$RAPSGELB,
+    ZITRONE       = charite_colors$ZITRONE,
+    LIMETTE       = charite_colors$LIMETTE,
+    GRASGRUEN     = charite_colors$GRASGRUEN,
+    AQUA          = charite_colors$AQUA,
+    MINERAL       = charite_colors$MINERAL,
+    LAVENDEL      = charite_colors$LAVENDEL,
+    LILA          = charite_colors$LILA
   )
 )

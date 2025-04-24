@@ -18,8 +18,8 @@ p <- ggplot(dummy, aes(x = predictor, y = outcome, fill = group)) +
     alpha = .6
   ) +
   scale_fill_manual(values = c(
-    "Patient" = colors_charite$PFLAUME,
-    "Control" = colors_charite$MINT
+    "Patient" = charite_colors$PFLAUME,
+    "Control" = charite_colors$MINT
   )) +
   scale_x_continuous(expand = c(0,0), limits = c(0, ceiling(max(dummy$predictor)))) +
   scale_y_continuous(expand = c(0,0), limits = c(0, ceiling(max(dummy$outcome)))) +
@@ -29,13 +29,12 @@ p <- ggplot(dummy, aes(x = predictor, y = outcome, fill = group)) +
        subtitle = "Charité"
   ) +
   theme_charite(
-    use_calibri = FALSE,
     base_size = 10,
     thickness = 0.5,
     grid = TRUE,
+    tiny_margins = FALSE,
     debug_area = FALSE
-  ) +
-  theme(plot.margin = margin(r = 5, l = 5, t = 5, b = 5))
+  )
 p
 
-nice_save("man/figures/figure_test.svg")
+nice_save("man/figures/TEST-figure-1.svg")

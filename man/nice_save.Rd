@@ -2,17 +2,24 @@
 % Please edit documentation in R/nice_save.R
 \name{nice_save}
 \alias{nice_save}
-\title{High-resolution (300dpi) figure export using defaults that are great
-for slides and publications}
+\title{High-resolution (300dpi) figure export for publications and slides}
 \usage{
-nice_save(filename, plot = ggplot2::last_plot(), width = 3.5, ...)
+nice_save(
+  filename,
+  plot = ggplot2::last_plot(),
+  layout = c("full col", "half col", "tiny", "full page", "slides"),
+  custom = NULL,
+  ...
+)
 }
 \arguments{
 \item{filename}{Name of the file to save. Should end in \code{.png}, \code{.svg}, etc.}
 
 \item{plot}{A ggplot object. If omitted, uses the last plot.}
 
-\item{width}{Width in inches. Default is 3.5 (ideal for slides).}
+\item{layout}{One of: "full col", "half col", "tiny", "full page", "slides".}
+
+\item{custom}{A vector of width and height in inches. If specified, will override \code{layout}}
 
 \item{...}{Additional arguments passed to \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}}.}
 }
@@ -20,15 +27,24 @@ nice_save(filename, plot = ggplot2::last_plot(), width = 3.5, ...)
 Saves the plot and returns the filename (invisibly).
 }
 \description{
-A wrapper around \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}} that saves plots with recommended
-dimensions, resolution, and format for slides and publications. By default,
-saves as 3.5 inch figure, which is the standard size of one column in a
-scientific publication ("full width figure"). Also consider "half width",
-which measures 1.8 inch.
+A wrapper around \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}} that saves plots with layout profiles
+optimized for slides and publications.
 }
 \details{
-If saving to \code{.svg}, this function requires the \code{svglite} package to be installed.
-You can install it with \code{install.packages("svglite")}.
+Supported layouts:
+\itemize{
+\item \code{"full col"} (3.5 in): Standard full-column publication figure
+\item \code{"half col"} (1.8 in): Half-width column figure
+\item \code{"tiny"}     (1 in): For compact figures or thumbnails
+\item \code{"full page"} (7 in): Full-page width figure
+\item \code{"slides"}   (4.5 in height): Slide-optimized height (width scaled automatically)
+}
+
+For optimal rendering, adjust \code{base_size} in \code{theme_charite()} and control sizes and margins in your plot.
+Recommended sizes: 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
+
+Plots rendered with \code{theme_charite()} have transparent backgrounds. You may override with \code{bg = "white"}.
+Saving to \code{.svg} requires the \code{svglite} package.
 }
 \examples{
 \dontrun{

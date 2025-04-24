@@ -1,19 +1,26 @@
-#' High-resolution (300dpi) figure export using defaults that are great
-#' for slides and publications
+#' High-resolution (300dpi) figure export for publications and slides
 #'
-#' A wrapper around [ggplot2::ggsave()] that saves plots with recommended
-#' dimensions, resolution, and format for slides and publications. By default,
-#' saves as 3.5 inch figure, which is the standard size of one column in a
-#' scientific publication ("full width figure"). Also consider "half width",
-#' which measures 1.8 inch.
+#' A wrapper around [ggplot2::ggsave()] that saves plots with layout profiles
+#' optimized for slides and publications.
 #' 
 #' @details
-#' If saving to `.svg`, this function requires the `svglite` package to be installed.
-#' You can install it with `install.packages("svglite")`.
+#' Supported layouts:
+#' - `"full col"` (3.5 in): Standard full-column publication figure
+#' - `"half col"` (1.8 in): Half-width column figure
+#' - `"tiny"`     (1 in): For compact figures or thumbnails
+#' - `"full page"` (7 in): Full-page width figure
+#' - `"slides"`   (4.5 in height): Slide-optimized height (width scaled automatically)
+#' 
+#' For optimal rendering, adjust `base_size` in `theme_charite()` and control sizes and margins in your plot.
+#' Recommended sizes: 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
+#' 
+#' Plots rendered with `theme_charite()` have transparent backgrounds. You may override with `bg = "white"`.
+#' Saving to `.svg` requires the `svglite` package.
 #'
 #' @param filename Name of the file to save. Should end in `.png`, `.svg`, etc.
 #' @param plot A ggplot object. If omitted, uses the last plot.
-#' @param width Width in inches. Default is 3.5 (ideal for slides).
+#' @param layout One of: "full col", "half col", "tiny", "full page", "slides".
+#' @param custom A vector of width and height in inches. If specified, will override `layout`
 #' @param ... Additional arguments passed to [ggplot2::ggsave()].
 #'
 #' @return Saves the plot and returns the filename (invisibly).
@@ -29,30 +36,62 @@
 nice_save <- function(
     filename,
     plot = ggplot2::last_plot(),
-    width = 3.5,
+    layout = c("full col", "half col", "tiny", "full page", "slides"),
+    custom = NULL,
     ...
 ) {
+  layout <- match.arg(layout)
   
-  # check for .svg output
+  dpi_set = 300
+  
+  # handle SVG dependency
   if (grepl("\\.svg$", filename, ignore.case = TRUE)) {
     if (!requireNamespace("svglite", quietly = TRUE)) {
       stop("Saving as .svg requires the 'svglite' package. Please install it with install.packages('svglite')")
     }
   }
   
-  # estimate aspect ratio from the ggplot object
+  # get sizes of text elements in width and height of the plot
+  # .. note:: this is the space in inches that will be occupied by elements
+  #           outside the plot panel
   g <- ggplot2::ggplotGrob(plot)
-  w_cm <- sum(grid::convertWidth(g$widths, "cm", valueOnly = TRUE))
-  h_cm <- sum(grid::convertHeight(g$heights, "cm", valueOnly = TRUE))
-  aspect_ratio <- h_cm / w_cm
-  height <- width * aspect_ratio
+  w_in <- sum(grid::convertWidth(g$widths, "in", valueOnly = TRUE))
+  h_in <- sum(grid::convertHeight(g$heights, "in", valueOnly = TRUE))
   
+  # get the aspect ratio of panel if one was specified by user
+  if(!is.null(plot$theme$aspect.ratio)) {
+    panel_ar <- plot$theme$aspect.ratio
+    message("Panel aspect ratio is ", panel_ar, ".")
+  } else {
+    panel_ar <- 1
+    message("No aspect ratio was manually specified. Using 1:1 ratio.")
+  }
+  
+  # define dimensions based on layout
+  if (!is.null(custom)) {
+    dims <- list(width = custom[1], height = custom[2])
+  } else {
+    dims <- switch(layout,
+                   "full col"  = list(width = 3.5, height = (((3.5 - w_in) * panel_ar) + h_in)),
+                   "half col"  = list(width = 1.8, height = (((1.8 - w_in) * panel_ar) + h_in)),
+                   "tiny"      = list(width = 1, height = (((1 - w_in) * panel_ar) + h_in)),
+                   "full page" = list(width = 7, height = (((7 - w_in) * panel_ar) + h_in)),
+                   "slides"    = list(width = (((4.5 - h_in) * 1/panel_ar) + w_in), height = 4.5),
+                   stop("Unknown layout '", layout, "'. Choose from: full col, half col, tiny, full page, slides.")
+    )
+  }
+  
+  # notify user
+  message("Saving a beautiful figure to: ", filename)
+  message("Tip: Use `scaling = value` to control plot element proportion when saving at different sizes.")
+  
+  # save the plot
   ggplot2::ggsave(
     filename = filename,
     plot = plot,
-    width = width,
-    height = height,
-    dpi = 300,
+    width = dims$width,
+    height = dims$height,
+    dpi = dpi_set,
     units = "in",
     ...
   )

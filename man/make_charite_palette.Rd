@@ -7,7 +7,7 @@
 make_charite_palette(palette = "primary", reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in `\link{charite_palettes}}
+\item{palette}{Character name of palette in `\link{charite_palettes} or a custom vector of hex codes}
 
 \item{reverse}{Boolean indicating whether the palette should be reversed}
 
@@ -18,7 +18,8 @@ A function that takes an integer \code{n} and returns \code{n} interpolated colo
 }
 \description{
 Internal function for the use of color palettes for continuous data or as many
-categories as required.
+categories as required. This function can be used to create your own custom
+color palette.
 }
 \examples{
 pal <- make_charite_palette("buch")

@@ -8,14 +8,13 @@
 
 <img src="man/figures/hex_charite.png" width="120" align="right" />
 
-A minimal R package with a custom ggplot2 theme, standardized colour
-palettes, and example plot styled to match the [visual
-identity](https://marke.charite.de/d/Y3FxSwD6Tz3a) of Charité –
-Universitätsmedizin Berlin.
+A minimal R package with a Charité-styled `ggplot2` theme, [visual
+identity](https://marke.charite.de/d/Y3FxSwD6Tz3a) colour palettes, and
+publication-ready figure export for manuscripts and slides.
 
 ## Installation
 
-You can install the development version of charite from
+You can install the development version of `charite` from
 [GitHub](https://github.com/johannesjuliusm/charite) with:
 
 ``` r
@@ -23,24 +22,24 @@ You can install the development version of charite from
 devtools::install_github("johannesjuliusm/charite")
 ```
 
+To install the package on a machine with proxies, e.g., the standard
+Windows PC in the Charité network, find more detailed install
+instructions in the [installation
+vignette](https://github.com/johannesjuliusm/charite/blob/main/doc/install_the_package.html).
+
 ## Examples
 
-Visualize time series data with the `theme_charite()`.
+Visualize time series data with `theme_charite()`.
 
-<div class="figure" style="text-align: center">
-
-<img src="man/figures/README-example-1.png" alt="Example plot generated with `example_plot( )`" width="100%" />
-<p class="caption">
-Example plot generated with `example_plot( )`
+<p align="center">
+<img src="man/figures/README-example-1.png" width="80%"/>
 </p>
-
-</div>
 
 Preview the available colour palettes.
 
 <div class="figure" style="text-align: center">
 
-<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="100%" />
+<img src="man/figures/README-preview-1.png" alt="Colour palettes available with the `charite` package" width="80%" />
 <p class="caption">
 Colour palettes available with the `charite` package
 </p>
@@ -57,9 +56,8 @@ p <- ggplot(data, aes(x = x, y = y)) +
 # format the plot style
 p <- p + theme_charite()
 
-# easily save your plot in a format ideal for slides and publications
-# .. note:: saving as .svg is strongly recommended but requires `svglite` to be installed
-nice_save("myfigure.svg", p)
+# easily save your plot in a format optimized for slides and publications
+nice_save("myfigure.png", p)
 ```
 
 ## Available Functions
@@ -69,17 +67,17 @@ nice_save("myfigure.svg", p)
   identity colours
 - `charite_palettes` – Named list of colour palettes derived from the
   Charité visual identity colour scheme
-- `example_plot()` – Generates a demo plot
-- `make_charite_palette()` – Internal function to interpolate or reverse
-  colour palettes in `charite_palettes`
-- `nice_save()` – ggsave wrapper with defaults ideal for high-res
-  figures for publication
 - `preview_charite_palettes()` – Shows the available colour palettes as
   colour swatches
+- `nice_save()` – ggsave wrapper with defaults ideal for high-res
+  figures for publication
 - `scale_color_charite()` – ggplot2 colour scale using palettes from
   `charite_palettes`
 - `scale_fill_charite()` – ggplot2 fill scale using palettes from
   `charite_palettes`
+- `example_plot()` – Generates a demo plot
+- `make_charite_palette()` – Internal function to interpolate or reverse
+  colour palettes
 - `virchow()` – Surprise console ASCII art. Use for fun
 - `curves` – Included dataset with time series curves for demo plot
 
@@ -91,9 +89,13 @@ Cognition](https://cognition.maxplanckschools.org/en/doctoral-candidates/johanne
 & [Charité – Universitätsmedizin
 Berlin](https://medpsych.charite.de/en/metas/person/person/address_detail/msc_johannes_mohn)
 
-Feel free to get in touch via <johannes.mohn@charite.de>
+Report bugs [here](https://github.com/johannesjuliusm/charite/issues).
+
+Get in touch via <johannes.mohn@charite.de>
 
 ## How to Acknowledge
 
 If you use this package in your work or publication, please acknowledge
-the author.
+the author.  
+*Example*: “The figures were generated using a custom theme from the
+`charite` R package by Johannes Julius Mohn.”

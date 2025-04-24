@@ -5,10 +5,12 @@
 \title{A custom ggplot2 theme for Charite – Universitaetsmedizin Berlin by Johannes Julius Mohn}
 \usage{
 theme_charite(
-  base_size = 10,
+  base_size = 8,
   thickness = 0.5,
+  font = "sans",
   grid = FALSE,
-  use_calibri = FALSE,
+  aspect_ratio = 3/4,
+  tiny_margins = FALSE,
   debug_area = FALSE
 )
 }
@@ -17,9 +19,17 @@ theme_charite(
 
 \item{thickness}{Line thickness for axes. Default ggplot2 setting is 0.5.}
 
+\item{font}{Character string for font family. Defaults to "sans" (ggplot2 default).
+Common alternatives: "Arial" or "Helvetica" in publications; "Calibri" suggested for Charite
+corporate identity; "Times New Roman", a timeless serif font.
+Note that the fonts must be installed on your OS to be used.}
+
 \item{grid}{Logical; if TRUE, grid lines are added.}
 
-\item{use_calibri}{Use Calibri font? Defaults to FALSE.}
+\item{aspect_ratio}{Aspect ratio of the plot panel (y:x axis). Default is 3:4.}
+
+\item{tiny_margins}{Logical; if TRUE, margins for all objects around the plot panel are minimized.
+Font rendering may depend on your system and the output format (PDF, PNG, SVG).}
 
 \item{debug_area}{Visualize the plot margins for plot size debugging. Defaults to FALSE.}
 }
@@ -27,12 +37,14 @@ theme_charite(
 A ggplot2 theme
 }
 \description{
-This function creates a custom ggplot2 theme with customizable options for font, line thickness, and grid.
-You can optionally choose to plot text in Calibri font if available on your OS.
+This function creates a custom ggplot2 theme with customizable options for font, line thickness, grid,
+plot panel aspect ratio, and margins.
 }
 \details{
-Calibri is the standard font on Windows and recommended by Charite. On macOS and Linux you may need to
-manually install the font first.
+To use a specific font, it must be installed on your operating system.
+Common fonts for figures include: "Arial" or "Helvetica" in publications and slides;
+"Calibri" is suggested for the Charite corporate identity. "Times New Roman" for
+contexts where legibility is aided by using a serif font.
 }
 \examples{
 library(ggplot2)
