@@ -21,7 +21,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        install.packages('devtools')
+        install.packages("devtools")
         devtools::install_deps(dependencies = TRUE)
 
     - name: Install pkgdown
