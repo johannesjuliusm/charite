@@ -19,7 +19,7 @@ scale_fill_charite(palette = "primary", discrete = TRUE, reverse = FALSE, ...)
 A ggplot2 scale object
 }
 \description{
-Applies a ggplot2 fill scale using one of the custom Charite color palettes from \link{charite_palettes}
+Applies a ggplot2 fill scale using one of the custom color palettes from \link{charite_palettes}
 }
 \examples{
 library(ggplot2)

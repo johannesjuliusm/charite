@@ -23,13 +23,13 @@ devtools::install_github("johannesjuliusm/charite")
 ```
 
 To install the package on a machine with proxies, e.g., the standard
-Windows PC in the Charité network, find more detailed install
+Windows PC in the Charité network, find more detailed installation
 instructions in the [installation
 vignette](https://github.com/johannesjuliusm/charite/blob/main/doc/install_the_package.html).
 
 ## Examples
 
-Visualize time series data with `theme_charite()`.
+Visualize your data with `theme_charite()` to match the corporate style.
 
 <p align="center">
 <img src="man/figures/README-example-1.png" width="80%"/>
@@ -44,15 +44,19 @@ Preview the available colour palettes.
 ## Workflow
 
 ``` r
-# create your ggplot
+# create your ggplot2 figure
 p <- ggplot(data, aes(x = x, y = y)) +
         geom_point(size = 3, color = charite_colors$HIMBEER) # use any of the Charité colors
         
 # format the plot style
 p <- p + theme_charite()
 
+# alternatively, customize the plot style further
+# for example by specifying a font
+p <- p + theme_charite(font = "Charité Text Office")
+
 # easily save your plot in a format optimized for slides and publications
-nice_save("myfigure.png", p)
+nice_save("myfigure.png", p, layout = "slides")
 ```
 
 ## Available Functions
@@ -93,4 +97,5 @@ Get in touch via <johannes.mohn@charite.de>
 If you use this package in your work or publication, please acknowledge
 the author.  
 *Example*: “The figures were generated using a custom theme from the
-`charite` R package by Johannes Julius Mohn.”
+`charite` R package by Johannes Julius Mohn
+(<https://github.com/johannesjuliusm/charite>).”

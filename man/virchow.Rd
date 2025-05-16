@@ -7,7 +7,7 @@
 virchow()
 }
 \value{
-A fun little Easter egg printing a classic ASCII rendering of Rudolf Virchow.
+A fun little Easter egg printing an ASCII rendering of Rudolf Virchow.
 }
 \description{
 Prints Rudolf Virchow as ASCII art to the R console.

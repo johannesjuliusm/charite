@@ -2,7 +2,7 @@
 % Please edit documentation in R/example_plot.R
 \name{example_plot}
 \alias{example_plot}
-\title{Generate an example plot with the ggplot2 Charite theme}
+\title{Generate an example plot with \code{\link[=theme_charite]{theme_charite()}}.}
 \usage{
 example_plot()
 }
@@ -10,13 +10,8 @@ example_plot()
 A ggplot object.
 }
 \description{
-Creates a stylized ggplot2 plot using the built-in \link{curves} dataset to demonstrate the
-ggplot2 Charite theme and color palette.
-}
-\details{
-This function is meant to provide a quick visual example of how the custom
-\code{\link[=theme_charite]{theme_charite()}} and \link{charite_colors} can be applied to typical time series
-data with shaded standard error ribbons.
+Creates a stylized ggplot2 plot using the built-in \link{curves} dataset to demonstrate the custom
+ggplot2 Charite theme and color palettes.
 }
 \examples{
 # generate and print the example plot

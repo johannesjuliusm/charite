@@ -16,7 +16,7 @@ c2 <- 3.9 * time^3 - 6 * time^2 + 3 * time + rnorm(n_time, 0, 0.01)
 # power function (square root shape)
 c3 <- time^0.5 + rnorm(n_time, 0, 0.005)
 
-# data frame
+# as data frame
 curves <- data.frame(
   time = rep(seq(1, n_time), 3),
   condition = factor(rep(c("C1", "C2", "C3"), each = n_time),

@@ -13,7 +13,7 @@ nice_save(
 )
 }
 \arguments{
-\item{filename}{Name of the file to save. Should end in \code{.png}, \code{.svg}, etc.}
+\item{filename}{Name of the file to save. Should end in \code{.png}, \code{.tiff}, \code{.svg}, etc.}
 
 \item{plot}{A ggplot object. If omitted, uses the last plot.}
 
@@ -35,13 +35,13 @@ Supported layouts:
 \itemize{
 \item \code{"full col"} (3.5 in): Standard full-column publication figure
 \item \code{"half col"} (1.8 in): Half-width column figure
-\item \code{"tiny"}     (1 in): For compact figures or thumbnails
+\item \code{"tiny"}     (1 in): For compact sub-figures or thumbnails
 \item \code{"full page"} (7 in): Full-page width figure
-\item \code{"slides"}   (4.5 in height): Slide-optimized height (width scaled automatically)
+\item \code{"slides"}   (4.5 in height): For presentation slides
 }
 
-For optimal rendering, adjust \code{base_size} in \code{theme_charite()} and control sizes and margins in your plot.
-Recommended sizes: 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
+For optimal rendering, adjust \code{font_size} in \code{theme_charite()} and control sizes and margins in your plot.
+Recommended sizes: 6 or 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
 
 Plots rendered with \code{theme_charite()} have transparent backgrounds. You may override with \code{bg = "white"}.
 Saving to \code{.svg} requires the \code{svglite} package.

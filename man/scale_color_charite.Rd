@@ -19,17 +19,17 @@ scale_color_charite(palette = "primary", discrete = TRUE, reverse = FALSE, ...)
 A ggplot2 scale object
 }
 \description{
-Applies a ggplot2 color scale using one of the custom Charite color palettes from \link{charite_palettes}
+Applies a ggplot2 color scale using one of the custom color palettes from \link{charite_palettes}
 }
 \examples{
 library(ggplot2)
 ggplot(mtcars, aes(mpg, cyl, color = mpg)) +
   geom_point(size = 3) +
-  scale_color_charite("buch", discrete = FALSE) +
+  scale_color_charite("berryseason", discrete = FALSE) +
   theme_charite()
 
 ggplot(mtcars, aes(factor(cyl), color = factor(cyl))) +
   geom_point(size = 5, stat = "count") +
-  scale_color_charite("buch") +
+  scale_color_charite("secondary") +
   theme_charite()
 }

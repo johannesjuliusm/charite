@@ -1,22 +1,16 @@
-#' A custom ggplot2 theme for Charite – Universitaetsmedizin Berlin by Johannes Julius Mohn
+#' A custom ggplot2 theme for scientific publications by Johannes Julius Mohn
 #'
 #' This function creates a custom ggplot2 theme with customizable options for font, line thickness, grid,
 #' plot panel aspect ratio, and margins.
 #' 
 #' @details
 #' To use a specific font, it must be installed on your operating system.
-#' Common fonts for figures include: "Arial" or "Helvetica" in publications and slides;
-#' "Calibri" is suggested for the Charite corporate identity. "Times New Roman" for
-#' contexts where legibility is aided by using a serif font.
 #'
 #' @param font_size Base font size in points like in your favourite text editor.
 #' @param thickness Line thickness for axes. Default ggplot2 setting is 0.5.
-#' @param font Character string for font family. Defaults to "sans" (ggplot2 default).
-#' Common alternatives: "Arial" or "Helvetica" in publications; "Calibri" suggested for Charite
-#' corporate identity; "Times New Roman", a timeless serif font.
-#' Note that the fonts must be installed on your OS to be used.
+#' @param font Character string for font family. Defaults to "sans".
 #' @param grid Logical; if TRUE, grid lines are added.
-#' @param aspect_ratio Aspect ratio of the plot panel (y:x axis). Default is 3:4.
+#' @param aspect_ratio Aspect ratio of the plot panel (y:x axis). Default is 1:1.
 #' @param tiny_margins Logical; if TRUE, margins for all objects around the plot panel are minimized.
 #' Font rendering may depend on your system and the output format (PDF, PNG, SVG).
 #' @param legend_key_size Size of the legend keys. Scales with font_size by default.
@@ -35,13 +29,11 @@
 #' 
 #' @examples
 #' library(ggplot2)
-#' p <- ggplot(ChickWeight, aes(x = Time, y = weight, color = weight)) +
-#'        geom_point(size = 3) +
-#'        scale_color_charite("goldelse", discrete = FALSE) +
-#'        theme_charite()
-theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
-                          grid = FALSE, aspect_ratio = 3/4, tiny_margins = FALSE,
-                          legend_key_size = NULL, debug_area = FALSE) {
+#' p <- ggplot(ChickWeight, aes(x = Time, y = weight)) +
+#'        geom_point() + theme_sci()
+theme_sci <- function(font_size = 8, thickness = 0.5, font = "sans",
+                      grid = FALSE, aspect_ratio = 1, tiny_margins = FALSE,
+                      legend_key_size = NULL, debug_area = FALSE) {
   
   # fonts check
   if(font != "sans" & !font %in% systemfonts::system_fonts()$family) {
@@ -50,7 +42,6 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
   }
   
   # set global size and margin parameters
-  title_size = round(font_size * 1.2)
   margin_size_title = if(tiny_margins) 4 else 8
   margin_size = if(tiny_margins) 2 else 4
   legend_size = round(font_size * 0.8)
@@ -60,19 +51,19 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
     theme(
       # titles
       plot.title = element_text(
-        color = charite_colors$PRIME_BLUE,
-        size = title_size,
+        color = "black",
+        size = rel(1),
         hjust = 0.5,
         margin = margin(t = 0, b = margin_size_title)
       ),
       plot.subtitle = element_text(
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         size = rel(1),
         hjust = 0.5,
         margin = margin(t = -margin_size_title/2, b = margin_size_title)
       ),
       plot.caption = element_text(
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         size = rel(1),
         hjust = 1,
         margin = margin(t = margin_size, unit = "pt")
@@ -80,13 +71,13 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
       
       # axes
       axis.title.x = element_text(
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         size = rel(1),
         margin = margin(t = margin_size, unit = "pt")
       ),
       axis.title.y = element_text(
         angle = 90,
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         size = rel(1),
         margin = margin(r = margin_size+2, unit = "pt")
       ),
@@ -94,11 +85,11 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
         size = rel(1)
       ),
       axis.text.x = element_text(
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         margin = margin(t = 2, b = 0, unit = "pt")
       ),
       axis.text.y = element_text(
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         margin = margin(r = 2, l = 0, unit = "pt")
       ),
       axis.ticks = element_line(
@@ -115,7 +106,7 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
       # legend
       legend.title = element_blank(),
       legend.text = element_text(
-        color = charite_colors$TEXT_GREY,
+        color = "black",
         size = legend_size
       ),
       legend.key.size = unit(legend_key_size, "lines"),
@@ -129,8 +120,8 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
         margin = margin(t = margin_size, b = margin_size)
       ),
       strip.background = element_rect(
-        fill = charite_colors$PRIME_BLUE,
-        color = charite_colors$PRIME_BLUE
+        fill = "black",
+        color = "black"
       ),
       panel.spacing = unit(if(tiny_margins) 0.4 else 0.8, "lines"),
       
@@ -144,7 +135,7 @@ theme_charite <- function(font_size = 8, thickness = 0.5, font = "sans",
   # add grid lines conditionally
   if (grid) {
     base_theme <- base_theme + theme(
-      panel.grid.major = element_line(color = charite_colors$PRIME_LGREY),
+      panel.grid.major = element_line(color = "#cbcfd2"),
       panel.grid.minor = element_line(color = "#e6e8ea")
     )
   } else {

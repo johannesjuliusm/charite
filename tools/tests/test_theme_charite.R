@@ -29,7 +29,7 @@ p <- ggplot(dummy, aes(x = predictor, y = outcome, fill = group)) +
        subtitle = "Charité"
   ) +
   theme_charite(
-    base_size = 10,
+    font_size = 10,
     thickness = 0.5,
     grid = TRUE,
     tiny_margins = FALSE,
@@ -37,4 +37,4 @@ p <- ggplot(dummy, aes(x = predictor, y = outcome, fill = group)) +
   )
 p
 
-nice_save("man/figures/TEST-figure-1.svg")
+nice_save("man/figures/test-figure-1.svg")

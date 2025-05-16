@@ -7,17 +7,17 @@
 #' Supported layouts:
 #' - `"full col"` (3.5 in): Standard full-column publication figure
 #' - `"half col"` (1.8 in): Half-width column figure
-#' - `"tiny"`     (1 in): For compact figures or thumbnails
+#' - `"tiny"`     (1 in): For compact sub-figures or thumbnails
 #' - `"full page"` (7 in): Full-page width figure
-#' - `"slides"`   (4.5 in height): Slide-optimized height (width scaled automatically)
+#' - `"slides"`   (4.5 in height): For presentation slides
 #' 
-#' For optimal rendering, adjust `base_size` in `theme_charite()` and control sizes and margins in your plot.
-#' Recommended sizes: 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
+#' For optimal rendering, adjust `font_size` in `theme_charite()` and control sizes and margins in your plot.
+#' Recommended sizes: 6 or 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
 #' 
 #' Plots rendered with `theme_charite()` have transparent backgrounds. You may override with `bg = "white"`.
 #' Saving to `.svg` requires the `svglite` package.
 #'
-#' @param filename Name of the file to save. Should end in `.png`, `.svg`, etc.
+#' @param filename Name of the file to save. Should end in `.png`, `.tiff`, `.svg`, etc.
 #' @param plot A ggplot object. If omitted, uses the last plot.
 #' @param layout One of: "full col", "half col", "tiny", "full page", "slides".
 #' @param custom A vector of width and height in inches. If specified, will override `layout`
@@ -61,10 +61,10 @@ nice_save <- function(
   # get the aspect ratio of panel if one was specified by user
   if(!is.null(plot$theme$aspect.ratio)) {
     panel_ar <- plot$theme$aspect.ratio
-    message("Panel aspect ratio is ", panel_ar, ".")
+    message("Plot panel aspect ratio is ", panel_ar, ".")
   } else {
     panel_ar <- 1
-    message("No aspect ratio was manually specified. Using 1:1 ratio.")
+    message("No aspect ratio was specified in your plot theme. Assuming 1:1 ratio.")
   }
   
   # define dimensions based on layout
@@ -82,8 +82,7 @@ nice_save <- function(
   }
   
   # notify user
-  message("Saving a beautiful figure to: ", filename)
-  message("Tip: Use `scaling = value` to control plot element proportion when saving at different sizes.")
+  message("Saving a ", round(dims$width, 2), "in x ", round(dims$height, 2), "in figure to: ", filename)
   
   # save the plot
   ggplot2::ggsave(

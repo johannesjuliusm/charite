@@ -14,14 +14,14 @@ charite_colors
 A hex color scheme of corporate identity colors
 }
 \description{
-A list of hex color codes with the primary, secondary, and accent colors for
-the Charite brand as defined by the Charite \href{https://marke.charite.de/d/Y3FxSwD6Tz3a}{Markenportal}
+A list of hex color codes with the primary, secondary, and accent colors as
+defined by the Charite \href{https://marke.charite.de/d/Y3FxSwD6Tz3a}{Markenportal}
 for use with \code{\link[=theme_charite]{theme_charite()}}
 }
 \examples{
 library(ggplot2)
 ggplot(as.data.frame(x = 2, y = 6), aes(x = 2, y = 6)) +
-    geom_point(size = 16, color = charite_colors$LIMETTE) +
+    geom_point(size = 16, color = charite_colors$LILA) +
     theme_charite()
 }
 \keyword{datasets}

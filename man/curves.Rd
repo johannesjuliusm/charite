@@ -17,8 +17,7 @@ A data frame with 300 rows and 4 variables:
 data(curves)
 }
 \description{
-A simulated dataset containing three time series conditions ("C1", "C2", "C3")
-with different shapes and associated standard errors, suitable for
-demonstrating ggplot2 plots with shaded ribbons.
+A simulated dataset containing three time series ("C1", "C2", "C3")
+with different shapes and associated standard errors
 }
 \keyword{datasets}

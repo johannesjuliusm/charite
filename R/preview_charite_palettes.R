@@ -1,7 +1,7 @@
-#' Preview available Charite color palettes
+#' Preview available color palettes
 #'
 #' Displays all color palettes defined in [charite::charite_palettes] as color swatches.
-#' Users can toggle between viewing the palettes as discrete colors or continuous gradients.
+#' Toggle between viewing the palettes as discrete colors or continuous gradients.
 #'
 #' @param type Character; either "discrete" or "continuous". Defaults to "discrete".
 #'

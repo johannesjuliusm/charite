@@ -1,13 +1,9 @@
 utils::globalVariables("curves")
 
-#' Generate an example plot with the ggplot2 Charite theme
+#' Generate an example plot with [charite::theme_charite()].
 #'
-#' Creates a stylized ggplot2 plot using the built-in [charite::curves] dataset to demonstrate the
-#' ggplot2 Charite theme and color palette.
-#'
-#' This function is meant to provide a quick visual example of how the custom
-#' [charite::theme_charite()] and [charite::charite_colors] can be applied to typical time series
-#' data with shaded standard error ribbons.
+#' Creates a stylized ggplot2 plot using the built-in [charite::curves] dataset to demonstrate the custom
+#' ggplot2 Charite theme and color palettes.
 #'
 #' @return A ggplot object.
 #' @export
@@ -48,6 +44,6 @@ example_plot <- function() {
       color = "Condition",
       fill = "Condition"
     ) +
-    theme_charite(base_size = 12)
+    theme_charite(font_size = 12)
   return(p)
 }

@@ -22,8 +22,8 @@ categories as required. This function can be used to create your own custom
 color palette.
 }
 \examples{
-pal <- make_charite_palette("buch")
+pal <- make_charite_palette("goldelse")
 pal(5)
-pal_rev <- make_charite_palette("mitte", reverse = TRUE)
+pal_rev <- make_charite_palette("mono", reverse = TRUE)
 pal_rev(10)
 }

@@ -2,7 +2,7 @@
 #'
 #' Prints Rudolf Virchow as ASCII art to the R console.
 #'
-#' @return A fun little Easter egg printing a classic ASCII rendering of Rudolf Virchow.
+#' @return A fun little Easter egg printing an ASCII rendering of Rudolf Virchow.
 #' @export
 virchow <- function() {
   ascii_path <- system.file("virchow_ascii.txt", package = "charite")

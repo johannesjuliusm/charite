@@ -1,8 +1,7 @@
 #' Simulated example time series data
 #'
-#' A simulated dataset containing three time series conditions ("C1", "C2", "C3")
-#' with different shapes and associated standard errors, suitable for
-#' demonstrating ggplot2 plots with shaded ribbons.
+#' A simulated dataset containing three time series ("C1", "C2", "C3")
+#' with different shapes and associated standard errors
 #'
 #' @format A data frame with 300 rows and 4 variables:
 #' \describe{

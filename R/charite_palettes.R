@@ -29,25 +29,25 @@ charite_palettes <- list(
     PRIME_LGREY   = charite_colors$PRIME_LGREY
   ),
   
-  buch = c(
+  versus = c(
     PRIME_BLUE    = charite_colors$PRIME_BLUE,
     ROT           = charite_colors$ROT
   ),
   
-  franklin = c(
+  nineties = c(
     LILA          = charite_colors$LILA,
     MINT          = charite_colors$MINT,
     MINERAL       = charite_colors$MINERAL
   ),
   
-  mitte = c(
+  brickhouse = c(
     WEINROT       = charite_colors$WEINROT,
     HIMBEER       = charite_colors$HIMBEER,
     MINT          = charite_colors$MINT,
     GRUEN         = charite_colors$GRUEN
   ),
   
-  cvk = c(
+  sunrise = c(
     SECOND_DBLUE  = charite_colors$SECOND_DBLUE,
     SECOND_LBLUE  = charite_colors$SECOND_LBLUE,
     ZITRONE       = charite_colors$ZITRONE,

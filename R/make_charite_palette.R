@@ -15,9 +15,9 @@
 #' @export
 #' 
 #' @examples
-#' pal <- make_charite_palette("buch")
+#' pal <- make_charite_palette("goldelse")
 #' pal(5)
-#' pal_rev <- make_charite_palette("mitte", reverse = TRUE)
+#' pal_rev <- make_charite_palette("mono", reverse = TRUE)
 #' pal_rev(10)
 make_charite_palette <- function(palette = "primary", reverse = FALSE, ...) {
   if (is.character(palette) && length(palette) == 1) {

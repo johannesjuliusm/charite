@@ -1,6 +1,6 @@
 #' Charite fill scale for ggplot2
 #'
-#' Applies a ggplot2 fill scale using one of the custom Charite color palettes from [charite::charite_palettes]
+#' Applies a ggplot2 fill scale using one of the custom color palettes from [charite::charite_palettes]
 #'
 #' @param palette Character name of a palette in [charite::charite_palettes]
 #' @param discrete Logical. Should the palette use discrete color steps?

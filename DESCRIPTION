@@ -1,11 +1,11 @@
 Package: charite
 Type: Package
-Title: A Theme and Tools for Charite-Style Plots
-Version: 0.3.0
+Title: A theme and tools for the Charite corporate identity
+Version: 0.4.0
 Encoding: UTF-8
 Author: Johannes Julius Mohn
 Maintainer: Johannes Julius Mohn <johannes.mohn@charite.de>
-Description: Provides a ggplot2 theme and color definitions following the Charite corporate style guide. When using the package, please acknowledge the author.
+Description: Provides a ggplot2 theme and color definitions following the Charite corporate identity style guide. When using the package, please acknowledge the author.
 License: MIT + file LICENSE
 Imports:
     ggplot2,

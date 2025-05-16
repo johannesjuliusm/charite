@@ -1,7 +1,7 @@
 #' Hex code color definitions of the official Charite visual identity color scheme
 #'
-#' A list of hex color codes with the primary, secondary, and accent colors for
-#' the Charite brand as defined by the Charite [Markenportal](https://marke.charite.de/d/Y3FxSwD6Tz3a)
+#' A list of hex color codes with the primary, secondary, and accent colors as
+#' defined by the Charite [Markenportal](https://marke.charite.de/d/Y3FxSwD6Tz3a)
 #' for use with [charite::theme_charite()]
 #'
 #' @return A hex color scheme of corporate identity colors
@@ -10,7 +10,7 @@
 #' @examples
 #' library(ggplot2)
 #' ggplot(as.data.frame(x = 2, y = 6), aes(x = 2, y = 6)) +
-#'     geom_point(size = 16, color = charite_colors$LIMETTE) +
+#'     geom_point(size = 16, color = charite_colors$LILA) +
 #'     theme_charite()
 charite_colors <- list(
   # Primary colors

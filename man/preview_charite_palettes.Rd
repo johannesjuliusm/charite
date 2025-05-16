@@ -2,7 +2,7 @@
 % Please edit documentation in R/preview_charite_palettes.R
 \name{preview_charite_palettes}
 \alias{preview_charite_palettes}
-\title{Preview available Charite color palettes}
+\title{Preview available color palettes}
 \usage{
 preview_charite_palettes(type = c("discrete", "continuous"))
 }
@@ -11,7 +11,7 @@ preview_charite_palettes(type = c("discrete", "continuous"))
 }
 \description{
 Displays all color palettes defined in \link{charite_palettes} as color swatches.
-Users can toggle between viewing the palettes as discrete colors or continuous gradients.
+Toggle between viewing the palettes as discrete colors or continuous gradients.
 }
 \examples{
 preview_charite_palettes()
