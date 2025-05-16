@@ -25,9 +25,6 @@ reference:
   - title: "Misc"
     contents:
       - "virchow"
-
-footer:
-  text: "Copyright © 2025 Johannes Julius Mohn"
  
 template:
   bootstrap: 5
