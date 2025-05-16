@@ -1,0 +1,33 @@
+title: "charite"
+url: "https://johannesjuliusm.github.io/charite/"
+
+logo: "man/figures/hex_charite.png"
+favicon: "man/figures/hex_charite.png"
+
+reference:
+  - title: "Main Functions"
+    contents:
+      - "theme_charite"
+      - "theme_sci"
+      - "nice_save"
+  - title: "Utilities"
+    contents:
+      - "charite_colors"
+      - "charite_palettes"
+      - "preview_charite_palettes"
+      - "scale_color_charite"
+      - "scale_fill_charite"
+      - "make_charite_palette"
+      - "example_plot"
+  - title: "Data"
+    contents:
+      - "curves"
+  - title: "Misc"
+    contents:
+      - "virchow"
+
+footer:
+  text: "Copyright © 2025 Johannes Julius Mohn"
+ 
+template:
+  bootstrap: 5
