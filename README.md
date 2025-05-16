@@ -25,7 +25,7 @@ devtools::install_github("johannesjuliusm/charite")
 To install the package on a machine with proxies, e.g., the standard
 Windows PC in the Charité network, find more detailed installation
 instructions in the [installation
-vignette](https://github.com/johannesjuliusm/charite/blob/main/doc/install_the_package.html).
+vignette](https://johannesjuliusm.github.io/charite/articles/install_the_package.html).
 
 ## Examples
 
