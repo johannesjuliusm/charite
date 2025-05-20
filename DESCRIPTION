@@ -5,7 +5,7 @@ Version: 0.4.0
 Encoding: UTF-8
 Author: Johannes Julius Mohn
 Maintainer: Johannes Julius Mohn <johannes.mohn@charite.de>
-Description: Provides a ggplot2 theme and color definitions following the Charité corporate identity style guide. When using the package, please acknowledge the author.
+Description: A minimal R package which provides a ggplot2 theme and color definitions following the Charité corporate identity style guide. When using the package, please acknowledge the author.
 License: MIT + file LICENSE
 Imports:
     ggplot2,
