@@ -40,8 +40,8 @@ charite_colors <- list(
   WEINROT       = "#89014c",
   HIMBEER       = "#d74b7f",
   ROT           = "#e31f2c",
-  RAPSGELB      = "#fab600",
-  ZITRONE       = "#ffdf43",
+  MANGO         = "#fab600",
+  RAPSGELB      = "#ffdf43",
   # Special colors
   EMPLOYER_BRANDING_GREEN = "#ccefcb"
 )

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="index.html">charite</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +40,22 @@
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/" class="external-link">Keep a Changelog</a>, and this project adheres to <a href="https://semver.org/spec/v2.0.0.html" class="external-link">Semantic Versioning</a>.</p>
 <hr><div class="section level2">
-<h2 id="id_040---2025-05-16">[0.4.0] - 2025-05-16<a class="anchor" aria-label="anchor" href="#id_040---2025-05-16"></a></h2>
+<h2 id="id_050---2026-05-14">[0.5.0] - 2026-05-14<a class="anchor" aria-label="anchor" href="#id_050---2026-05-14"></a></h2>
 <div class="section level3">
 <h3 id="new-features">New features<a class="anchor" aria-label="anchor" href="#new-features"></a></h3>
+<ul><li>Improved figure export handling in <code><a href="reference/nice_save.html">nice_save()</a></code> with added vector device logic and improved PDF/EPD/SVG behavior</li>
+<li>Added warnings and robustness to <code><a href="reference/nice_save.html">nice_save()</a></code>, extended help with notes on better rendering</li>
+<li>Changed default dpi from 300 to 600 for figure exports</li>
+</ul></div>
+<div class="section level3">
+<h3 id="fixes">Fixes<a class="anchor" aria-label="anchor" href="#fixes"></a></h3>
+<ul><li>Changes color names: what was ZITRONE is now RAPSGELB, what was RAPSGELB is now MANGO</li>
+</ul><hr></div>
+</div>
+<div class="section level2">
+<h2 id="id_040---2025-05-16">[0.4.0] - 2025-05-16<a class="anchor" aria-label="anchor" href="#id_040---2025-05-16"></a></h2>
+<div class="section level3">
+<h3 id="new-features-1">New features<a class="anchor" aria-label="anchor" href="#new-features-1"></a></h3>
 <ul><li>Added <code><a href="reference/theme_sci.html">theme_sci()</a></code>, a derivative of <code><a href="reference/theme_charite.html">theme_charite()</a></code> for publications in journals</li>
 <li>Added a vignette with installation instructions for computers with proxies</li>
 <li>Added message informing about saved figure size to <code><a href="reference/nice_save.html">nice_save()</a></code>
@@ -52,17 +65,17 @@
 <li>Updated function descriptions of all functions</li>
 </ul></div>
 <div class="section level3">
-<h3 id="fixes">Fixes<a class="anchor" aria-label="anchor" href="#fixes"></a></h3>
+<h3 id="fixes-1">Fixes<a class="anchor" aria-label="anchor" href="#fixes-1"></a></h3>
 <ul><li>Fixed font warning in <code><a href="reference/theme_charite.html">theme_charite()</a></code> to remain silent when default “sans” is used</li>
 <li>Fixed default background colour of legend in <code>theme_charité</code>, now transparent like the plot</li>
 <li>Fixed scaling of legend keys in <code><a href="reference/theme_charite.html">theme_charite()</a></code>
 </li>
-</ul></div>
+</ul><hr></div>
 </div>
 <div class="section level2">
 <h2 id="id_030---2025-04-24">[0.3.0] - 2025-04-24<a class="anchor" aria-label="anchor" href="#id_030---2025-04-24"></a></h2>
 <div class="section level3">
-<h3 id="new-features-1">New features<a class="anchor" aria-label="anchor" href="#new-features-1"></a></h3>
+<h3 id="new-features-2">New features<a class="anchor" aria-label="anchor" href="#new-features-2"></a></h3>
 <ul><li>
 <code><a href="reference/nice_save.html">nice_save()</a></code> now supports manual height/width overrides.</li>
 <li>
@@ -73,7 +86,7 @@
 </li>
 </ul></div>
 <div class="section level3">
-<h3 id="fixes-1">Fixes<a class="anchor" aria-label="anchor" href="#fixes-1"></a></h3>
+<h3 id="fixes-2">Fixes<a class="anchor" aria-label="anchor" href="#fixes-2"></a></h3>
 <ul><li>
 <code>.svg</code> export error caused by <code>fill = NA</code> in <code>element_rect()</code>.</li>
 <li>Plot dimensions more accurately calculated in <code><a href="reference/nice_save.html">nice_save()</a></code>.</li>
@@ -83,7 +96,7 @@
 <div class="section level2">
 <h2 id="id_020---2025-04-20">[0.2.0] - 2025-04-20<a class="anchor" aria-label="anchor" href="#id_020---2025-04-20"></a></h2>
 <div class="section level3">
-<h3 id="new-features-2">New features<a class="anchor" aria-label="anchor" href="#new-features-2"></a></h3>
+<h3 id="new-features-3">New features<a class="anchor" aria-label="anchor" href="#new-features-3"></a></h3>
 <ul><li>Added <code>charite_palettes</code> and <code><a href="reference/make_charite_palette.html">make_charite_palette()</a></code> for custom color interpolation.</li>
 <li>Added <code><a href="reference/scale_fill_charite.html">scale_fill_charite()</a></code> and <code><a href="reference/scale_color_charite.html">scale_color_charite()</a></code>.</li>
 <li>Added <code><a href="reference/nice_save.html">nice_save()</a></code> for optimized plot rendering</li>
