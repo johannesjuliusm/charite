@@ -50,8 +50,8 @@ charite_palettes <- list(
   sunrise = c(
     SECOND_DBLUE  = charite_colors$SECOND_DBLUE,
     SECOND_LBLUE  = charite_colors$SECOND_LBLUE,
-    ZITRONE       = charite_colors$ZITRONE,
-    RAPSGELB      = charite_colors$RAPSGELB
+    RAPSGELB      = charite_colors$RAPSGELB,
+    MANGO         = charite_colors$MANGO
   ),
   
   berryseason = c(
@@ -64,8 +64,8 @@ charite_palettes <- list(
   ),
   
   goldelse = c(
+    MANGO         = charite_colors$MANGO,
     RAPSGELB      = charite_colors$RAPSGELB,
-    ZITRONE       = charite_colors$ZITRONE,
     LIMETTE       = charite_colors$LIMETTE,
     GRASGRUEN     = charite_colors$GRASGRUEN,
     AQUA          = charite_colors$AQUA,

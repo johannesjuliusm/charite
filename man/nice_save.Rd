@@ -2,7 +2,7 @@
 % Please edit documentation in R/nice_save.R
 \name{nice_save}
 \alias{nice_save}
-\title{High-resolution (300dpi) figure export for publications and slides}
+\title{High-resolution (600dpi) figure export for publications and slides}
 \usage{
 nice_save(
   filename,
@@ -13,7 +13,7 @@ nice_save(
 )
 }
 \arguments{
-\item{filename}{Name of the file to save. Should end in \code{.png}, \code{.tiff}, \code{.svg}, etc.}
+\item{filename}{Name of the file to save. Should end in \code{.png}, \code{.tiff}, \code{.pdf}, \code{.svg}, etc.}
 
 \item{plot}{A ggplot object. If omitted, uses the last plot.}
 
@@ -33,18 +33,23 @@ optimized for slides and publications.
 \details{
 Supported layouts:
 \itemize{
-\item \code{"full col"} (3.5 in): Standard full-column publication figure
+\item \code{"full col"} (3.6 in): Standard full-column publication figure
 \item \code{"half col"} (1.8 in): Half-width column figure
 \item \code{"tiny"}     (1 in): For compact sub-figures or thumbnails
-\item \code{"full page"} (7 in): Full-page width figure
-\item \code{"slides"}   (4.5 in height): For presentation slides
+\item \code{"full page"} (7.2 in): Full-page width figure
+\item \code{"slides"}   (4.4 in height): For presentation slides
 }
 
 For optimal rendering, adjust \code{font_size} in \code{theme_charite()} and control sizes and margins in your plot.
 Recommended sizes: 6 or 8 pt for most plots, 6 pt or smaller for "tiny" plots; 10 or 12 pt for "slides".
 
+A note on fonts: System-installed fonts like Helvetica usually behave much better in vector graphics
+export than non-standard fonts like Calibri or in-house fonts.
+
 Plots rendered with \code{theme_charite()} have transparent backgrounds. You may override with \code{bg = "white"}.
+For publication-ready figures, .pdf is the preferred publication vector format.
 Saving to \code{.svg} requires the \code{svglite} package.
+SVG font rendering may vary across platforms and viewers, especially for non-standard fonts such as Calibri.
 }
 \examples{
 \dontrun{

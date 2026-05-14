@@ -3,7 +3,7 @@ title: "Installing Packages"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{install_the_package}
+  %\VignetteIndexEntry{Installing Packages}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

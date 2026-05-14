@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [0.5.0] - 2026-05-14
+
+### New features
+- Improved figure export handling in `nice_save()` with added vector device logic and improved PDF/EPD/SVG behavior
+- Added warnings and robustness to `nice_save()`, extended help with notes on better rendering
+- Changed default dpi from 300 to 600 for figure exports
+
+### Fixes
+- Changes color names: what was ZITRONE is now RAPSGELB, what was RAPSGELB is now MANGO
+
+---
 
 ## [0.4.0] - 2025-05-16
 
@@ -21,6 +32,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed font warning in `theme_charite()` to remain silent when default "sans" is used
 - Fixed default background colour of legend in `theme_charité`, now transparent like the plot
 - Fixed scaling of legend keys in `theme_charite()`
+
+---
 
 ## [0.3.0] - 2025-04-24
 
