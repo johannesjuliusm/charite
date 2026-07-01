@@ -90,7 +90,7 @@ Berlin](https://medpsych.charite.de/en/metas/person/person/address_detail/msc_jo
 
 Report bugs [here](https://github.com/johannesjuliusm/charite/issues).
 
-Get in touch via <johannes.mohn@charite.de>
+Get in touch via <johannes.j.mohn@maxplanckschools.de>
 
 ## How to Acknowledge
 

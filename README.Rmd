@@ -88,7 +88,7 @@ Developed by **Johannes Julius Mohn**
 
 Report bugs [here](https://github.com/johannesjuliusm/charite/issues).
 
-Get in touch via [johannes.mohn@charite.de](mailto:johannes.mohn@charite.de)
+Get in touch via [johannes.j.mohn@maxplanckschools.de](mailto:johannes.j.mohn@maxplanckschools.de)
 
 ## How to Acknowledge
 
