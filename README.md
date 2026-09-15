@@ -62,23 +62,20 @@ nice_save("myfigure.png", p, layout = "slides")
 ## Available Functions
 
 - `theme_charite()` – A custom ggplot2 theme
-- `charite_colors` – Named list of hex codes of the Charité visual
-  identity colours
+- `charite_colors` – Named list of hex codes of the Charité colours
 - `charite_palettes` – Named list of colour palettes derived from the
-  Charité visual identity colour scheme
-- `preview_charite_palettes()` – Shows the available colour palettes as
-  colour swatches
-- `nice_save()` – ggsave wrapper with defaults ideal for high-res
-  figures for publication
-- `scale_color_charite()` – ggplot2 colour scale using palettes from
+  Charité visual identity
+- `preview_charite_palettes()` – Shows the available colour palettes
+- `nice_save()` – ggsave wrapper for high-res publication-ready figures
+- `scale_color_charite()` – ggplot2 colour scale using the
   `charite_palettes`
-- `scale_fill_charite()` – ggplot2 fill scale using palettes from
+- `scale_fill_charite()` – ggplot2 fill scale using the
   `charite_palettes`
-- `example_plot()` – Generates a demo plot
+- `example_plot()` – A demo plot
 - `make_charite_palette()` – Internal function to interpolate or reverse
   colour palettes
-- `virchow()` – Surprise console ASCII art. Use for fun
-- `curves` – Included dataset with time series curves for demo plot
+- `virchow()` – Surprise ASCII art. Use for fun
+- `curves` – Included dataset for demo plot
 
 ## Author
 
