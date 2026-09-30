@@ -41,7 +41,7 @@ Go to the [GitHub page](https://github.com/johannesjuliusm/charite) and download
 ```{r install from source}
 # install `charite` from tarball
 # replace with your path
-install.packages("~/Downloads/charite_0.4.0.tar.gz", repos = NULL, type = "source")
+install.packages("~/Downloads/charite_0.5.1.tar.gz", repos = NULL, type = "source")
 ```
 
 ## Working on a computer with proxies  

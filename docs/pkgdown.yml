@@ -3,7 +3,7 @@ pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
   install_the_package: install_the_package.html
-last_built: 2026-09-30T14:02Z
+last_built: 2026-09-30T14:09Z
 urls:
   reference: https://johannesjuliusm.github.io/charite/reference
   article: https://johannesjuliusm.github.io/charite/articles
