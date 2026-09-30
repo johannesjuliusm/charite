@@ -1,6 +1,6 @@
 Package: charite
 Type: Package
-Title: A ggplot2 theme and plotting tools for the Charité corporate identity
+Title: charite: Charité-styled publication-ready visualization in R
 Version: 0.5.1
 Encoding: UTF-8
 Author: Johannes Julius Mohn
@@ -22,5 +22,5 @@ Depends:
     R (>= 2.10)
 LazyData: true
 VignetteBuilder: knitr
-URL: https://johannesjuliusm.github.io/charite, https://github.com/johannesjuliusm/charite
+URL: https://github.com/johannesjuliusm/charite
 BugReports: https://github.com/johannesjuliusm/charite/issues

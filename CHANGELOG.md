@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [0.5.1] - 2026-09-30
+
+### Fixes
+- Startup message
+- Citation added
+- License updated
+- The package is now also available for python
+
+---
+
 ## [0.5.0] - 2026-05-14
 
 ### New features
