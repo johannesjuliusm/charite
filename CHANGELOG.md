@@ -8,11 +8,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [0.5.1] - 2026-09-30
 
+### New features
+- Receive motivation from the package by calling `motivate()`
+
 ### Fixes
-- Startup message
+- Startup message added
 - Citation added
-- License updated
-- The package is now also available for python
+
+### News
+- The package is now also available for python: https://github.com/pedRamezani/charite-plot
 
 ---
 

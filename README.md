@@ -76,6 +76,7 @@ nice_save("myfigure.png", p, layout = "slides")
 - `make_charite_palette()` – Internal function to interpolate or reverse
   colour palettes
 - `virchow()` – Surprise ASCII art. Use for fun
+- `motivate()` – Get some motivation when stuck
 - `curves` – Included dataset for demo plot
 
 ## How to cite
