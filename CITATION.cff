@@ -1,5 +1,4 @@
 cff-version: 1.2.0
-message: "If you use this package, please cite it:"
 type: software
 
 title: "charite: Charité-styled publication-ready visualization in R"
