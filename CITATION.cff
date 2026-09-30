@@ -1,10 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this package, please cite it using the metadata below."
-title: "Charité-styled publication-ready visualization in R"
+message: "If you use this package, please cite it:"
+type: software
+
+title: "charite: Charité-styled publication-ready visualization in R"
+version: 0.5.1
+date-released: 2026-05-14
+
 authors:
   - family-names: "Mohn"
     given-names: "Johannes Julius"
     orcid: "https://orcid.org/0000-0002-3893-8008"
-version: 0.5.0
-date-released: 2026-05-14
-license: MIT
+
+repository-code: https://github.com/johannesjuliusm/charite
+url: https://johannesjuliusm.github.io/charite/index.html
+
+license: "MIT"

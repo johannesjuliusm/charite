@@ -14,7 +14,7 @@ publication-ready figure export for manuscripts and slides.
 
 ## Installation
 
-You can install the development version of `charite` from
+You can install the `charite` package from
 [GitHub](https://github.com/johannesjuliusm/charite) with:
 
 ``` r
@@ -66,7 +66,8 @@ nice_save("myfigure.png", p, layout = "slides")
 - `charite_palettes` – Named list of colour palettes derived from the
   Charité visual identity
 - `preview_charite_palettes()` – Shows the available colour palettes
-- `nice_save()` – ggsave wrapper for high-res publication-ready figures
+- `nice_save()` – wrapper of `ggplot2::ggsave()` for high-res
+  publication-ready figures
 - `scale_color_charite()` – ggplot2 colour scale using the
   `charite_palettes`
 - `scale_fill_charite()` – ggplot2 fill scale using the
@@ -77,22 +78,35 @@ nice_save("myfigure.png", p, layout = "slides")
 - `virchow()` – Surprise ASCII art. Use for fun
 - `curves` – Included dataset for demo plot
 
-## Author
+## How to cite
 
-Developed by **Johannes Julius Mohn**  
-[Max Planck School of
-Cognition](https://cognition.maxplanckschools.org/en/doctoral-candidates/johannes-j-mohn)
-& [Charité – Universitätsmedizin
-Berlin](https://medpsych.charite.de/en/metas/person/person/address_detail/msc_johannes_mohn)
+If you use the `charite` R package in your work, please cite:
+
+``` bibtex
+@software{mohn2026charite,
+  author    = {Mohn, Johannes Julius},
+  title     = {charite: Charité-styled publication-ready visualization in R},
+  year      = {2026},
+  version   = {0.5.1},
+  url       = {https://github.com/johannesjuliusm/charite},
+  license   = {MIT}
+}
+```
+
+## License
+
+MIT © 2026 Johannes Julius Mohn
 
 Report bugs [here](https://github.com/johannesjuliusm/charite/issues).
 
+## Acknowledgements
+
+Developed by **Johannes Julius Mohn** ([Max Planck School of
+Cognition](https://cognition.maxplanckschools.org/en/doctoral-candidates/johannes-j-mohn)
+& [Charité – Universitätsmedizin Berlin](https://www.charite.de/))  
 Get in touch via <johannes.j.mohn@maxplanckschools.de>
 
-## How to Acknowledge
-
-If you use this package in your work or publication, please acknowledge
-the author.  
-*Example*: “The figures were generated using a custom theme from the
-`charite` R package by Johannes Julius Mohn
-(<https://github.com/johannesjuliusm/charite>).”
+The hex logo was designed by **Valentina Nercolini**.  
+`charite` is now also available as a [python
+package](https://github.com/pedRamezani/charite-plot) developed by
+**Pedram Ramezani**.

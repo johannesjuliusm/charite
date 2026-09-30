@@ -1,11 +1,11 @@
-# Package management ------------------------------------------------------
+# Package management -----------------------------------------------------------
 
 library(ggplot2)
 library(charite)
 library(ggpubr)
 
 
-# Point plots -------------------------------------------------------------
+# Point plots ------------------------------------------------------------------
 
 # plain figure without modifications
 ggplot(ChickWeight, aes(x = Time, y = weight)) +
@@ -47,7 +47,7 @@ p
 nice_save("example_scatter_plot.png", p, layout = "slides")
 
 
-# Box plots ---------------------------------------------------------------
+# Box plots --------------------------------------------------------------------
 
 df <- ToothGrowth
 df$dose <- factor(recode(df$dose, "0.5" = "Placebo", "1" = "Treatment", "2" = "Control"))
