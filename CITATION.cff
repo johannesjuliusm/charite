@@ -12,5 +12,6 @@ authors:
 
 repository-code: https://github.com/johannesjuliusm/charite
 url: https://johannesjuliusm.github.io/charite/index.html
+doi: 10.5281/zenodo.23066036
 
-license: "MIT"
+license: MIT
